@@ -1,7 +1,8 @@
 .upvote-logo {
+    border-radius: .5rem;
     cursor: pointer;
-    margin: 0.25rem;
-    transform: scale(2);
+    height: auto;
+    width: 3rem;
 }
 
 .default {
