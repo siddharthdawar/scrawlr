@@ -1,0 +1,21 @@
+.upvote-logo {
+    cursor: pointer;
+    margin: 0.25rem;
+    transform: scale(2);
+}
+
+.default {
+    background-color: #F4F6F8;
+
+    path {
+        fill: #343A40;
+    }
+}
+
+.upvoted {
+    background-color: #E5E8FD;
+
+    path {
+        fill: #253CF2;
+    }
+}
