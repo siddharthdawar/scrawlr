@@ -36,5 +36,13 @@ describe('Upvoting', () => {
     votes.forEach((vote) => {
       expect(vote).toHaveClass('upvote-logo upvoted');
     });
+
+    await user.click(firstVoteLogoFromListOne);
+
+    votes = await screen.findAllByTestId('upvote-logo');
+
+    votes.forEach((vote) => {
+      expect(vote).toHaveClass('upvote-logo default');
+    });
   });
 });
