@@ -1,4 +1,7 @@
-import {useEffect, useReducer} from 'react';
+import {
+    useEffect,
+    useReducer
+} from 'react';
 import {UpvoteList} from './components/upvote-list/UpvoteList';
 import {getInitialState} from './utilities/storage';
 import {reducer} from './store/reducer';
@@ -25,21 +28,23 @@ export const App = () => {
 
     return (
         <main className='app'>
-            <UpvoteList
-                list={state.listOne}
-                onAddVoteClick={() => handleAddVoteClick('listOne')}
-                onUpvoteClick={() => handleUpvoteClick('listOne')}
-            />
-            <UpvoteList
-                list={state.listTwo}
-                onAddVoteClick={() => handleAddVoteClick('listTwo')}
-                onUpvoteClick={() => handleUpvoteClick('listTwo')}
-            />
-            <UpvoteList
-                list={state.listThree}
-                onAddVoteClick={() => handleAddVoteClick('listThree')}
-                onUpvoteClick={() => handleUpvoteClick('listThree')}
-            />
+            <section className='upvote-lists'>
+                <UpvoteList
+                    list={state.listOne}
+                    onAddVoteClick={() => handleAddVoteClick('listOne')}
+                    onUpvoteClick={() => handleUpvoteClick('listOne')}
+                />
+                <UpvoteList
+                    list={state.listTwo}
+                    onAddVoteClick={() => handleAddVoteClick('listTwo')}
+                    onUpvoteClick={() => handleUpvoteClick('listTwo')}
+                />
+                <UpvoteList
+                    list={state.listThree}
+                    onAddVoteClick={() => handleAddVoteClick('listThree')}
+                    onUpvoteClick={() => handleUpvoteClick('listThree')}
+                />
+            </section>
         </main>
     );
 };
